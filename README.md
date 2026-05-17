@@ -2,6 +2,11 @@
 
 A complete full-stack starter application built with React, Tailwind CSS, Node.js, Express, MongoDB, Socket.io, and Leaflet.
 
+## Live Demo
+
+- Frontend: https://food-rescue-system-phi.vercel.app
+- Backend: https://food-rescue-system-y8zs.onrender.com
+
 ## Structure
 
 - `backend/` - Express server, MongoDB models, Socket.io, REST APIs.
