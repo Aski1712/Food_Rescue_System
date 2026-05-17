@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://food-rescue-system-y8zs.onrender.com/api/$1"
+    }
+  ]
+}

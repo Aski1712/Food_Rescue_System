@@ -8,6 +8,7 @@ const LoginPage = () => {
   const [loading, setLoading] = useState(false);
   const { saveSession } = useAuth();
   const navigate = useNavigate();
+  const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -19,7 +20,7 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/auth/login', {
+      const response = await fetch(`${API_BASE_URL}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),

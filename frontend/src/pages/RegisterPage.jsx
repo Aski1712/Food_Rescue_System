@@ -8,6 +8,7 @@ const RegisterPage = () => {
   const [loading, setLoading] = useState(false);
   const { saveSession } = useAuth();
   const navigate = useNavigate();
+  const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
   const handleChange = (event) => {
     setForm({ ...form, [event.target.name]: event.target.value });
@@ -19,7 +20,7 @@ const RegisterPage = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/auth/register', {
+      const response = await fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...form, location: { coordinates: [0, 0] } }),
